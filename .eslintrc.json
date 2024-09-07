@@ -1,4 +1,9 @@
 {
+  "rules": {
+    "linebreak-style": ["error", "windows"]  // This allows CRLF
+  }
+}
+{
   "env": {
     "browser": true,
     "es6": true,
