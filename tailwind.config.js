@@ -1,10 +1,11 @@
-// tailwind.config.js
 module.exports = {
-  content: [
-    './src//*.{js,jsx,ts,tsx}', // Adjust paths as needed
-  ],
+  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'], // Ensure this includes all relevant files
+  darkMode: false, 
   theme: {
     extend: {},
   },
-  plugins: [],
-};
+  variants: {
+    extend: {},
+  },
+  plugins: [],
+}
