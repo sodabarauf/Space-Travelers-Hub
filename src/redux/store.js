@@ -7,4 +7,4 @@ const store = configureStore({
   },
 });
 
-export default App;
+export default store;
