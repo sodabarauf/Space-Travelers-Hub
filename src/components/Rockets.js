@@ -22,8 +22,12 @@ const Rockets = () => {
           className="flex flex-col sm:flex-row gap-4 font-sans"
           key={rocket.rocket_id}
         >
-          <div className="flex-1 mb-4 sm:mb-0">
-            <img className="w-full h-auto" src={rocket.flickr_images[0]} alt="" />
+          <div className="flex-2 mb-4 sm:mb-0">
+            <img 
+              className="w-full h-64 sm:h-72 lg:h-80 object-cover" 
+              src={rocket.flickr_images[0]} 
+              alt={rocket.rocket_name} 
+            />
           </div>
           <div className="flex flex-col flex-4 gap-2">
             <h2 className="text-gray-600 text-xl sm:text-2xl font-semibold font-mono">
