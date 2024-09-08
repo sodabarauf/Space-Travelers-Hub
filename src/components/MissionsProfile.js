@@ -25,12 +25,10 @@ const MissionsProfile = () => {
 
       <div className="my-4">
         <ul className="list-none p-0 border border-gray-300 rounded-md w-full">
-          {joinedMissions.map((mission, index) => (
+          {joinedMissions.map((mission) => (
             <li
               key={mission.mission_id}
-              className={`py-2 px-3 sm:py-3 sm:px-4 border-b border-gray-300 text-sm sm:text-base md:text-lg ${
-                index === joinedMissions.length - 1 ? 'border-none' : ''
-              }`}
+              className={`py-2 px-4 border-b border-gray-300 ${mission === joinedMissions[joinedMissions.length - 1] ? 'border-none' : ''}`}
             >
               {mission.mission_name}
             </li>
