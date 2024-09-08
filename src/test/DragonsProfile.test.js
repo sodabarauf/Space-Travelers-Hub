@@ -11,7 +11,7 @@ test('Check if dragons profile component is rendered correctly', () => {
       <BrowserRouter>
         <DragonsProfile />
       </BrowserRouter>
-    </Provider>
+    </Provider>, // Add the trailing comma here
   );
   expect(asFragment()).toMatchSnapshot();
 });
