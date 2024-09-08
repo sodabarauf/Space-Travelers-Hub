@@ -15,7 +15,7 @@ const MissionsProfile = () => {
         <ul className="list-none space-y-2">
           {joinedMissions.map((mission) => (
             <li
-              key={mission.mission_id}  {/* Use mission_id as the key */}
+              key={mission.mission_id}
               className="border border-gray-300 p-2 text-sm sm:text-base md:text-lg sm:p-4 capitalize font-medium"
             >
               {mission.mission_name}
