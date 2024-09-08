@@ -1,19 +1,10 @@
-
-import React from 'react';
+import React from 'react'; // No blank line before this
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Dragons from './components/Dragons';
 import DragonsProfile from './components/DragonsProfile';
 
 function App() {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchRockets());
-    dispatch(fetchMissions());
-  }, [dispatch]);
-
   return (
-
     <div className="App">
       <Router>
         <Routes>
