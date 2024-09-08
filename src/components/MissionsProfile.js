@@ -42,4 +42,3 @@ const MissionsProfile = () => {
 };
 
 export default MissionsProfile;
-
