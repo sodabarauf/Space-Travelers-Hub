@@ -5,12 +5,14 @@ import DragonsProfile from './components/DragonsProfile';
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Dragons />} />
-        <Route path="/profile" element={<DragonsProfile />} />
-      </Routes>
-    </Router>
+    <div className="App">
+      <Router>
+        <Routes>
+          <Route path="/" element={<Dragons />} />
+          <Route path="/profile" element={<DragonsProfile />} />
+        </Routes>
+      </Router>
+    </div>
   );
 }
 
