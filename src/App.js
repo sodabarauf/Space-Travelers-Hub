@@ -1,18 +1,19 @@
-import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Dragons from './components/Dragons';
+import DragonsProfile from './components/DragonsProfile';
+
 function App() {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-  }, [dispatch]);
-
   return (
-    <BrowserRouter>
-      <Routes>
-      </Routes>
-    </BrowserRouter>
+    <div className="App">
+      <Router>
+        <Routes>
+          <Route path="/" element={<Dragons />} />
+          <Route path="/profile" element={<DragonsProfile />} />
+        </Routes>
+      </Router>
+    </div>
   );
 }
 
-export default App;
+export default App;
