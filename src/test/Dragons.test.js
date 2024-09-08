@@ -11,7 +11,7 @@ test('Check if dragon component is rendered correctly', () => {
       <BrowserRouter>
         <Dragons />
       </BrowserRouter>
-    </Provider>
+    </Provider>,
   );
   expect(asFragment()).toMatchSnapshot();
 });
