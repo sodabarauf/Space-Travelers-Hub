@@ -4,7 +4,6 @@ import { Provider } from 'react-redux';
 import store from './redux/store';
 import './index.css';
 import App from './App';
-import store from './redux/store';
 
 // Get the root element from the DOM
 const container = document.getElementById('root');
