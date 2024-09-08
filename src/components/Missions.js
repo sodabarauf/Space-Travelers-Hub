@@ -18,7 +18,12 @@ const Missions = () => {
   return (
     <div className="w-5/6 mx-auto my-4 font-mono">
       {loading && <p className="text-center text-gray-600">Loading...</p>}
-      {error && <p className="text-center text-red-500">Error: {error}</p>}
+      {error && (
+        <p className="text-center text-red-500">
+          Error:
+          <span>{error}</span>
+        </p>
+      )}
       <table className="w-full border-collapse bg-white shadow-lg rounded-lg">
         <thead>
           <tr className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
