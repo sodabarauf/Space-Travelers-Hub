@@ -16,4 +16,3 @@ test('Check if missions profile component is rendered correctly', () => {
 
   expect(tree).toMatchSnapshot();
 });
-
