@@ -1,6 +1,6 @@
 module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'], // Ensure this includes all relevant files
-  darkMode: false, 
+  darkMode: false,
   theme: {
     extend: {},
   },
