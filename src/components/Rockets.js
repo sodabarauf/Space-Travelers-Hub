@@ -24,9 +24,9 @@ const Rockets = () => {
         >
           <div className="flex-2 mb-4 sm:mb-0">
             <img 
-              className="w-full h-64 sm:h-72 lg:h-80 object-cover" 
-              src={rocket.flickr_images[0]} 
-              alt={rocket.rocket_name} 
+              className="w-full h-64 sm:h-72 lg:h-80 object-cover"
+              src={rocket.flickr_images[0]}
+              alt={rocket.rocket_name}
             />
           </div>
           <div className="flex flex-col flex-4 gap-2">
