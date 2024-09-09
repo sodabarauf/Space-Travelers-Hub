@@ -1,18 +1,33 @@
-import React from 'react'; // No blank line before this
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Rockets from './components/Rockets';
+import Missions from './components/Missions';
 import Dragons from './components/Dragons';
-import DragonsProfile from './components/DragonsProfile';
+import { fetchMissions } from './redux/missions/missionsSlice';
+import { fetchRockets } from './redux/rockets/rocketsSlice';
+import { fetchDragons } from './redux/dragons/dragonsSlice';
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchRockets());
+    dispatch(fetchMissions());
+    dispatch(fetchDragons());
+  }, [dispatch]);
+
   return (
-    <div className="App">
-      <Router>
-        <Routes>
-          <Route path="/" element={<Dragons />} />
-          <Route path="/profile" element={<DragonsProfile />} />
-        </Routes>
-      </Router>
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        {/* Assign unique paths for Rockets and Dragons */}
+        <Route exact path="/" element={<Rockets />} />
+        <Route exact path="/dragons" element={<Dragons />} />
+        <Route exact path="/missions" element={<Missions />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

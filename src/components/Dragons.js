@@ -1,35 +1,24 @@
-import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchDragons, reserveDragon, cancelReservation } from '../redux/dragons/dragonsSlice';
+import { cancelReservation, reserveDragon } from '../redux/dragons/dragonsSlice';
 
 function Dragons() {
-  const dispatch = useDispatch();
   const { dragons, status, error } = useSelector((state) => state.dragons);
+  const dispatch = useDispatch();
 
-  useEffect(() => {
-    if (status === 'idle') {
-      dispatch(fetchDragons());
-    }
-  }, [status, dispatch]);
-
-  if (status === 'loading') {
-    return <div>Loading...</div>;
+  if (status) {
+    return <div className="text-center text-lg">Loading, please wait...</div>;
   }
 
-  if (status === 'failed') {
+  if (error) {
     return (
-      <div>
-        Error:
-        <br />
-        {error}
-      </div>
+      <div className="text-center text-red-600 text-lg">Error loading!</div>
     );
   }
 
   return (
     <section className="container mx-auto p-4 max-w-screen-lg">
       <h1 className="text-2xl font-bold mb-4 text-center">SpaceX Dragons</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 bg:red">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-3 ">
         {dragons.map((dragon) => (
           <div key={dragon.id} className="border p-4 rounded shadow">
             <h1 className="text-xl font-semibold text-center">{dragon.name}</h1>

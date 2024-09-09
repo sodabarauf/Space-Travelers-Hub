@@ -1,49 +1,55 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
+const initialState = {
+  dragons: [],
+  loading: false,
+  error: null,
+};
+
 // Thunk to fetch dragons from the API
-export const fetchDragons = createAsyncThunk('dragons/fetchDragons', async () => {
+export const fetchDragons = createAsyncThunk('get/dragons', async () => {
   const response = await axios.get('https://api.spacexdata.com/v4/dragons');
   return response.data;
 });
 
 const dragonsSlice = createSlice({
-  name: 'dragons',
-  initialState: {
-    dragons: [],
-    status: 'idle',
-    error: null,
-  },
+  name: 'Dragons',
+  initialState,
   reducers: {
     reserveDragon: (state, action) => {
-      const dragon = state.dragons.find((dragon) => dragon.id === action.payload);
-      if (dragon) {
-        dragon.reserved = true;
-      }
+      const id = action.payload;
+      const newState = state.dragons.map((dragon) => {
+        if (dragon.id !== id) return dragon;
+        return { ...dragon, reserved: true };
+      });
+      state.dragons = newState;
     },
     cancelReservation: (state, action) => {
-      const dragon = state.dragons.find((dragon) => dragon.id === action.payload);
-      if (dragon) {
-        dragon.reserved = false;
-      }
+      const id = action.payload;
+      const newState = state.dragons.map((dragon) => {
+        if (dragon.id !== id) return dragon;
+        return { ...dragon, reserved: false };
+      });
+      state.dragons = newState;
     },
   },
   extraReducers: (builder) => {
     builder
       .addCase(fetchDragons.pending, (state) => {
-        state.status = 'loading';
+        state.loading = true;
       })
       .addCase(fetchDragons.fulfilled, (state, action) => {
-        state.status = 'succeeded';
-        state.dragons = action.payload;
+        state.loading = false;
+        state.dragons = action.payload;  // Corrected this line
+        state.error = null;
       })
       .addCase(fetchDragons.rejected, (state, action) => {
-        state.status = 'failed';
+        state.loading = false;
         state.error = action.error.message;
       });
   },
 });
 
 export const { reserveDragon, cancelReservation } = dragonsSlice.actions;
-
 export default dragonsSlice.reducer;

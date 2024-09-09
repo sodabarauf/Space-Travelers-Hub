@@ -1,23 +1,23 @@
-import React from 'react';
 import { useSelector } from 'react-redux';
 
-function DragonsProfile() {
+const DragonsProfile = () => {
   const { dragons } = useSelector((state) => state.dragons);
-
   return (
-    <section className="container mx-auto p-4">
-      <h2 className="text-2xl font-bold mb-4">My Dragons</h2>
-      <ul className="list-disc pl-4">
-        {dragons
-          .filter((dragon) => dragon.reserved)
+    <section className="font-mono p-4 sm:p-8 lg:p-12">
+      <h2 className="text-xl sm:text-2xl lg:text-3xl mb-4">My Dragons</h2>
+      <ul className="list-none">
+        {dragons.filter((dragon) => dragon.reserved)
           .map((dragon) => (
-            <li key={dragon.id} className="text-xl">
-              {dragon.name}
+            <li
+              key={dragon.id}  {/* Corrected this line */}
+              className="border border-gray-300 p-2 sm:p-4 lg:p-6 text-lg sm:text-xl lg:text-2xl capitalize font-normal mb-2"
+            >
+              {dragon.name} {/* Changed to match the actual property */}
             </li>
           ))}
       </ul>
     </section>
   );
-}
+};
 
 export default DragonsProfile;

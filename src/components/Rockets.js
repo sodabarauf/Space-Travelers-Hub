@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { cancelReservation, reserveRocket } from '../redux/rockets/rocketsSlice';
 
-const Rockets = () => {
+function Rockets() {
   const { rockets, status, error } = useSelector((state) => state.rockets);
   const dispatch = useDispatch();
 
@@ -63,6 +63,6 @@ const Rockets = () => {
       ))}
     </div>
   );
-};
+}
 
 export default Rockets;
