@@ -24,7 +24,7 @@
 
 ## Demo 📸
 
-[Live Demo](https://drum-machine--neon-starburst-037542.netlify.app/)🚀
+[Live Demo](https://space-travelers-57bhr7syo-sodabaraufs-projects.vercel.app/)🚀
 💻
 
 ## Installation 👩‍💻
