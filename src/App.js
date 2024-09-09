@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import Profile from './components/Profile';
 import Rockets from './components/Rockets';
 import Missions from './components/Missions';
 import Dragons from './components/Dragons';
@@ -22,7 +23,7 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Routes>
-        {/* Assign unique paths for Rockets and Dragons */}
+        <Route exact path="/profile" element={<Profile />} />
         <Route exact path="/" element={<Rockets />} />
         <Route exact path="/dragons" element={<Dragons />} />
         <Route exact path="/missions" element={<Missions />} />
