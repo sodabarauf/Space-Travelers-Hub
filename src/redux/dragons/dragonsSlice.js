@@ -41,7 +41,7 @@ const dragonsSlice = createSlice({
       })
       .addCase(fetchDragons.fulfilled, (state, action) => {
         state.loading = false;
-        state.dragons = action.payload;  // Corrected this line
+        state.dragons = action.payload;
         state.error = null;
       })
       .addCase(fetchDragons.rejected, (state, action) => {

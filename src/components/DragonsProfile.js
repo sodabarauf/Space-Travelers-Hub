@@ -9,10 +9,11 @@ const DragonsProfile = () => {
         {dragons.filter((dragon) => dragon.reserved)
           .map((dragon) => (
             <li
-              key={dragon.id}  {/* Corrected this line */}
+              key={dragon.id}
               className="border border-gray-300 p-2 sm:p-4 lg:p-6 text-lg sm:text-xl lg:text-2xl capitalize font-normal mb-2"
             >
-              {dragon.name} {/* Changed to match the actual property */}
+              {dragon.name}
+              {/* Corrected JSX comment here */}
             </li>
           ))}
       </ul>
