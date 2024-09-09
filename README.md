@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+# 📖 Space Travellers' Hub
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Space Travellers' Hub Is a web application built with react and redux and spaceXAPI. Users can view rockets and missions and create resrvations.📗
 
-## Available Scripts
 
-In the project directory, you can run:
+```javascript
+<thead>
+  <tr className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white text-xs">
+    <th className="px-2 py-2 text-left font-semibold uppercase md:px-6 md:py-4 md:text-base">
+      Mission
+    </th>
+    <th className="px-2 py-2 text-left font-semibold uppercase md:px-6 md:py-4 md:text-base">
+      Description
+    </th>
+    <th className="px-2 py-2 text-left font-semibold uppercase md:px-6 md:py-4 md:text-base">
+      Status
+    </th>
+    <th className="px-2 py-2 text-center font-semibold uppercase md:px-6 md:py-4 md:text-base">
+      Action
+    </th>
+  </tr>
+</thead>
+```
 
-### `npm start`
+## Demo 📸
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[Live Demo](https://drum-machine--neon-starburst-037542.netlify.app/)🚀
+💻
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation 👩‍💻
 
-### `npm test`
+To get a local copy up and running, follow these steps.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Setup
 
-### `npm run build`
+To get this repository to your desired folder:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+#   cd space-traveler-hub
+# git clone https://github.com/sodabarauf/space-travelers-hub.git
+```
+Running the app
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To get app running:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+#  npm install
+ # npm start
+```
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Usage 🎯
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+# Clone the repo to your local machine.
+# Install dependencies using npm install or yarn install.
+# Run the project with npm start or yarn start.
+# Write markdown and see the live preview instantly.
+# Customize the preview using CSS and build for production if needed.
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Features ⭐
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- User Profiles and Reservation History: Allow users to create profiles, log in, and view past reservations, offering a personalized experience.
+- Dynamic Filtering and Sorting: Enable users to filter and sort missions and rockets by type, status, or name for easier navigation.
+- Notification System: Implement real-time notifications for mission or rocket status updates, keeping users informed about their reservations.
 
-## Learn More
+## 👥 Authors 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+👤 Author1: Elham Afzali
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [Linkedin](https://www.linkedin.com/in/elham-afzali-05326130b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app)
+- [Email](elham.afzali1383@gmail.com)
+- [Github](https://github.com/elhamy786)
 
-### Code Splitting
+👤 Author2: Sodaba Rauf
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- [Linkedin](https://www.linkedin.com/in/sodaba-r-5a0733255/)
+- [Email](sodabarauf4@gmail.com)
+- [Github](https://github.com/sodabarauf)
 
-### Analyzing the Bundle Size
+👤 Author2: Breshna Hamidi
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- [Linkedin](https://www.linkedin.com/in/breshna-hamidi-67699a295?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
+- [Email](breshna2004@gmail.com)
+- [Github](https://github.com/Breshnahamidi20)
 
-### Making a Progressive Web App
+## Contributing 🤝
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+To contribute, submit bug reports, feature requests, or pull requests via the GitHub repository issues and pull requests tabs.
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
