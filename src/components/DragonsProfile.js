@@ -12,7 +12,8 @@ const DragonsProfile = () => {
               key={dragon.id}
               className="border border-gray-300 p-2 sm:p-4 lg:p-6 text-lg sm:text-xl lg:text-2xl capitalize font-normal mb-2"
             >
-              {dragon.name} {/* Corrected JSX comment here */}
+              {dragon.name}
+              {/* Corrected JSX comment here */}
             </li>
           ))}
       </ul>
