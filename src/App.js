@@ -1,10 +1,16 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Profile from './components/Profile';
 
-import './App.css';
 
 function App() {
+  
   return (
-    <div className="App">
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route exact path="/profile" element={<Profile />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
